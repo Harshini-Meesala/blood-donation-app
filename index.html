@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Blood Donation DApp</title>
+
+    <!-- Web3 -->
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+
+    <!-- Your JS -->
+    <script src="script.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: red;
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 320px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        input {
+            margin: 5px;
+            padding: 8px;
+            width: 90%;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkred;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🩸 Blood Donation DApp</h1>
+
+    <!-- 🩸 REGISTER DONOR -->
+    <div class="box">
+        <h3>Register Donor</h3>
+
+        <input type="text" id="name" placeholder="Name"><br>
+        <input type="text" id="blood" placeholder="Blood Group"><br>
+
+        <button onclick="addDonor()">Add Donor</button>
+    </div>
+
+    <!-- 📋 VIEW DONORS -->
+    <div class="box">
+        <h3>View Donors</h3>
+
+        <button onclick="getDonors()">Get Donors</button>
+
+        <ul id="list"></ul>
+    </div>
+
+    <!-- 🩸 REQUEST BLOOD -->
+    <div class="box">
+        <h3>Request Blood</h3>
+
+        <input type="text" id="patient" placeholder="Patient Name"><br>
+        <input type="text" id="reqBlood" placeholder="Blood Group"><br>
+
+        <button onclick="requestBlood()">Request Blood</button>
+        <button onclick="getRequests()">View Requests</button>
+
+        <ul id="requestsList"></ul>
+    </div>
+
+</body>
+
+</html>
